@@ -1,0 +1,7 @@
+<table class="table">
+  <% for i in 0..@titles.size%>
+    <tr>
+      <th><a href="http://m.stock.naver.com/item/main.nhn#/stocks/005930/news/<%=@article_id[i]%>/office/<%=@office_id[i]%>" style="color:black;"><%= @titles[i] %><%= @press[i] %><%= @wdate[i] %></a></th>
+    </tr>
+  <% end %>
+</table>
