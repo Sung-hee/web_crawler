@@ -47,9 +47,12 @@ class NewsinfoController < ApplicationController
     @press = Array.new
     @wdate = Array.new
     @url = Array.new
+      
+    @companycode = request.original_url.split("companycode=").last
+    puts @companycode
     
-    companycode = "005930"
-    url = "http://finance.naver.com/item/news_news.nhn?code=005930"
+    url = "http://finance.naver.com/item/news_news.nhn?code=#{@companycode}"
+    puts url
     naver_html = HTTParty.get(url)
     doc = Nokogiri::HTML(naver_html)
     

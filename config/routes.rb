@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'newsinfo#index'
+  root 'newsinfo#crolling'
   
   get '/index' => 'newsinfo#index'
   get '/crolling' => 'newsinfo#crolling'
